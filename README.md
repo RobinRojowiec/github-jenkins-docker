@@ -24,11 +24,7 @@ This volume will store data from the jenkins configuration to avoid data loss on
 ### Go to the *jenkins* directory
 
 ```bash
-sudo docker container run -d  \
--p 80:8080  \
--v /var/run/docker.sock:/var/run/docker.sock \
--v jenkins_data:/var/jenkins_home \
---name jenkins-local gustavoapolinario/jenkins-docker:latest
+docker container run -d -p 80:8080  -v /var/run/docker.sock:/var/run/docker.sock -v jenkins_data:/var/jenkins_home --name jenkins-local berndserker/jenkins:latest
 ```
 
 This command pulls the latest LTS version of the jenkins container from Dockerhub and runs it using the previously created volume *jenkins_data* and the local port *80*.
@@ -37,49 +33,49 @@ This command pulls the latest LTS version of the jenkins container from Dockerhu
 
 When opening the browser on *http://localhost/* you should see either (loading image follow up) or: 
 
-![admin password](img/admin_password_initial.png)
+![admin password](/img/admin_password_initial.png)
 
 To find out the password, run
 
 ```bash
-sudo docker logs jenkins-local
+docker logs jenkins-local
 ```
 
 then you should see this:
 
-![gen password](img/jenkins_admin_password.png)
+![gen password](/img/jenkins_admin_password.png)
 
 # Setup jenkins
 
 ## Click on **Select plugins to install**
-![gen password](img/jenkins_install_mask.png)
+![gen password](/img/jenkins_install_mask.png)
 
 ## Select Docker, NodeJS and Github Branch Plugin as well as Git
 
-![gen password](img/jenkins_github_plugin.png)
+![gen password](/img/jenkins_github_plugin.png)
 
 ## After filling in a username (admin) and password, click Install
 
-![](img/jenkins_create_admin_account.png)
+![](/img/jenkins_create_admin_account.png)
 
 ## Finally, click **Save and Continue**
 
 # Create a pipeline
 
-![](img/jenkins_menu.png)
+![](/img/jenkins_menu.png)
 
 ## Click **Create element**
 
-![](img/jenkins_create_docker_pipeline.png)
+![](/img/jenkins_create_docker_pipeline.png)
 
 ## Enter a name for your pipeline, select type **Pipeline** and click Okay
 
 ## Copy the pipeline script from **Jenkinsfile** into the editor in the section *Pipeline*
 
-![](img/jenkins_add_pipeline_script.png)
+![](/img/jenkins_add_pipeline_script.png)
 
 ## Click save
 
-![](img/jenkins_pipeline_menu.png)
+![](/img/jenkins_pipeline_menu.png)
 
 ## Test the pipeline by clicking **Run build**
