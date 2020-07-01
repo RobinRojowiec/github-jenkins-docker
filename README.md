@@ -24,7 +24,7 @@ This volume will store data from the jenkins configuration to avoid data loss on
 ### Go to the *jenkins* directory
 
 ```bash
-docker container run -d -p 80:8080  -v /var/run/docker.sock:/var/run/docker.sock -v jenkins_data:/var/jenkins_home --name jenkins-local berndserker/jenkins:latest
+docker run -d -p 80:8080 -p 50000:50000 -v /var/run/docker.sock:/var/run/docker.sock -v jenkins_data:/var/jenkins_home --name jenkins-local berndserker/jenkins:latest
 ```
 
 This command pulls the latest LTS version of the jenkins container from Dockerhub and runs it using the previously created volume *jenkins_data* and the local port *80*.

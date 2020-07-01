@@ -1,1 +1,1 @@
-docker build -t robin/jenkins .
+docker build -t berndserker/jenkins-docker-linux .

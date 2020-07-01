@@ -1,0 +1,1 @@
+docker build -t robin/jenkins-agent-s390x .
