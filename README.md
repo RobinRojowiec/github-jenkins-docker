@@ -43,39 +43,39 @@ docker logs jenkins-local
 
 then you should see this:
 
-![gen password](/img/jenkins_admin_password.png)
+![gen password](/img/jenkins_admin_password.PNG)
 
 # Setup jenkins
 
 ## Click on **Select plugins to install**
-![gen password](/img/jenkins_install_mask.png)
+![gen password](/img/jenkins_install_mask.PNG)
 
 ## Select Docker, NodeJS and Github Branch Plugin as well as Git
 
-![gen password](/img/jenkins_github_plugin.png)
+![gen password](/img/jenkins_github_plugin.PNG)
 
 ## After filling in a username (admin) and password, click Install
 
-![](/img/jenkins_create_admin_account.png)
+![](/img/jenkins_create_admin_account.PNG)
 
 ## Finally, click **Save and Continue**
 
 # Create a pipeline
 
-![](/img/jenkins_menu.png)
+![](/img/jenkins_menu.PNG)
 
 ## Click **Create element**
 
-![](/img/jenkins_create_docker_pipeline.png)
+![](/img/jenkins_create_docker_pipeline.PNG)
 
 ## Enter a name for your pipeline, select type **Pipeline** and click Okay
 
 ## Copy the pipeline script from **Jenkinsfile** into the editor in the section *Pipeline*
 
-![](/img/jenkins_add_pipeline_script.png)
+![](/img/jenkins_add_pipeline_script.PNG)
 
 ## Click save
 
-![](/img/jenkins_pipeline_menu.png)
+![](/img/jenkins_pipeline_menu.PNG)
 
 ## Test the pipeline by clicking **Run build**
